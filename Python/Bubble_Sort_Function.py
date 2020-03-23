@@ -1,18 +1,20 @@
 from random import randint
 
-def bubble(array):
-    for i in range(N - 1):
-        for j in range(N - i - 1):
-            if array[j] > array[j + 1]:
-                buffer = array[j]
-                array[j] = array[j + 1]
-                array[j + 1] = buffer
+# logic of Algorithm [логіка алгоритму]
+def bubble_sort(array):
+    for horizontal_index in range(len(array) - 1):
+        for vertical_index in range(len(array) - horizontal_index - 1):
+            if array[vertical_index] > array[vertical_index + 1]:
+                current_value = array[vertical_index]
+                array[vertical_index] = array[vertical_index + 1]
+                array[vertical_index + 1] = current_value
 
+# test case [Тестовий випадок]
 N = 10
 a = []
 for i in range(N):
     a.append(randint(0, 99))
 
-print(a)
-bubble(a)
-print(a)
+print(a) # Random array [Випадковий масив]
+bubble_sort(a)
+print(a) # Sorted array [Відсортований масив]
