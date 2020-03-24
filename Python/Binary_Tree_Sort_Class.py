@@ -316,7 +316,6 @@ def treesort(arr):
     inorder(root,res)
     return res
 
-# print(treesort([7,1,5,2,19,14,17]))
 
 # my_tree.root.print_tree()
 # test case [Тестовий випадок]
