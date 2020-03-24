@@ -14,7 +14,7 @@ def selection_sort(array):
 # test case [Тестовий випадок]
 N = 10
 a = []
-for i in range(N):
+for index in range(N):
     a.append(randint(0, 99))
 
 print(a) # Random array [Випадковий масив]
