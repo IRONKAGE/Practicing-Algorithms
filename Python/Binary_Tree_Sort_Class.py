@@ -8,16 +8,19 @@ class BinaryTreeNode():
         self.right = None
 
     def insert(self, _value):
-        if _value < self.value:
-            if self.left is None:
-                self.left = BinaryTreeNode(_value)
-            else:
-                self.left.insert(_value)
-        else:
-            if self.right is None:
-                self.right = BinaryTreeNode(_value)
-            else:
-                self.right.insert(_value)
+        # if self.value: # Uncomment if You want unique values [Розкоментуйте, якщо Ви хочете унікальні значення]
+            if _value < self.value:
+                if self.left is None:
+                    self.left = BinaryTreeNode(_value)
+                else:
+                    self.left.insert(_value)
+            elif _value > self.value: # You can write `else:` [Ви можете написати `else:`]
+                if self.right is None:
+                    self.right = BinaryTreeNode(_value)
+                else:
+                    self.right.insert(_value)
+        # else: # Uncomment if You want unique values [Розкоментуйте, якщо Ви хочете унікальні значення]
+        #     self.value = _value # Uncomment if You want unique values [Розкоментуйте, якщо Ви хочете унікальні значення]
 
 def in_order(root, results):
     if root:
