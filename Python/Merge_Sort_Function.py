@@ -23,13 +23,12 @@ def merge_sort(a):
         for i in R: 
             a.append(i) 
 
-# Input list 
-a = [12, 11, 13, 5, 6, 7] 
-print("Given array is") 
-print(a) 
+# test case [Тестовий випадок]
+N = 10
+a = []
+for index in range(N):
+    a.append(randint(0, 99))
 
-merge_sort(a) 
-
-# Print output 
-print("Sorted array is : ") 
-print(a) 
+print(a) # Random array [Випадковий масив]
+merge_sort(a)
+print(a) # Sorted array [Відсортований масив]
