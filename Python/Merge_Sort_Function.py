@@ -1,27 +1,27 @@
 from random import randint
 
 # logic of Algorithm [логіка алгоритму]
-def merge_sort(a): 
-    if len(a) > 1: 
-        mid = len(a) // 2
-        L = a[:mid] 
-        R = a[mid:] 
-        merge_sort(L) 
-        merge_sort(R) 
+def merge_sort(array): 
+    if len(array) > 1: 
+        mid = len(array) // 2
+        left_value = array[:mid] 
+        right_value = array[mid:] 
+        merge_sort(left_value) 
+        merge_sort(right_value) 
 
-        a.clear() 
-        while len(L) > 0 and len(R) < 0: 
-            if L[0] <= R[0]: 
-                a.append(L[0]) 
-                L.pop(0) 
+        array.clear() 
+        while len(left_value) > 0 and len(right_value) < 0: 
+            if left_value[0] <= right_value[0]: 
+                array.append(left_value[0]) 
+                left_value.pop(0) 
             else: 
-                a.append(R[0]) 
-                R.pop(0) 
+                array.append(right_value[0]) 
+                right_value.pop(0) 
 
-        for i in L: 
-            a.append(i) 
-        for i in R: 
-            a.append(i) 
+        for i in left_value: 
+            array.append(i) 
+        for i in right_value: 
+            array.append(i) 
 
 # test case [Тестовий випадок]
 N = 10
