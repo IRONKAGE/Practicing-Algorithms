@@ -18,10 +18,10 @@ def merge_sort(array):
                 array.append(right_value[0]) 
                 right_value.pop(0) 
 
-        for i in left_value: 
-            array.append(i) 
-        for i in right_value: 
-            array.append(i) 
+        for index in left_value: 
+            array.append(index) 
+        for index in right_value: 
+            array.append(index) 
 
 # test case [Тестовий випадок]
 N = 10
